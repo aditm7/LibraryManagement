@@ -1,0 +1,28 @@
+{% extends "books_user.html"%}
+{% block main%}
+<table class="table table-bordered" style="width:100%">
+<caption>List of Books currently borrowed</caption>
+  <thead>
+    <tr>
+      <th scope="col">Book name</th>
+      <th scope="col">Issued date</th>
+      <th scope="col">Due date</th>
+      <th scope="col">Review</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <th scope="row">{{item.book.name}}</th>
+      <td>{{item.idate}}</td>
+      <td>{{item.edate}}</td>
+      <td><form method="post" action="{{t}}">
+    {% csrf_token %}
+            <label for="inputno" class="sr-only"></label>
+        <input type="text" id="inputno" name="rew" class="form-control" placeholder="enter no b/w 1-5" required
+            autofocus>
+    <button type="submit">Submit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock main%}

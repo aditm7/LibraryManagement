@@ -1,0 +1,25 @@
+{% extends "books_user.html"%}
+{% block main%}
+<table class="table table-bordered" style="width:100%">
+<caption>List of Books currently borrowed are shown in red</caption>
+  <thead>
+    <tr>
+      <th scope="col">Book name</th>
+      <th scope="col">Issued date</th>
+      <th scope="col">Due date</th>
+      <th scope="col">Review</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in ls %}
+      <tr bgcolor="#FF8484">
+      <th scope="row">{{item.book.name}}</th>
+      <td>{{item.idate}}</td>
+      <td>{{item.edate}}</td>
+      <td><a href="{{item.book.code}}/review">Give rating</a></td>
+      </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock main%}
