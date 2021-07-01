@@ -7,4 +7,4 @@ Now to run the project locally, head to the main directory and run following in 
 $ python3 manage.py runserver
 
 to access a detailed documentation head to below link:
-https://www.notion.so/Documentation-d8ddb306dc5d4308b72cc69232e3a945
+https://www.notion.so/Documentation-3c860e5bb98a4fd2a8f0f2a57885b1d6
